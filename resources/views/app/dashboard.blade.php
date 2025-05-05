@@ -5,12 +5,24 @@
 <p>Selamat datang di Sistem Informasi Data Santri. anda login sebagai <b> {{ Auth::user()->level }}</b> </p>
 
 @if (Auth::user()->level =='calon_santri')  
-<h5>tatacara untuk mendaftar</h5>
+<h5>✨ Panduan Pendaftaran Mudah ✨</h5>
 <ul>
-    <li>1. mengakses formulir pendaftaran</li>
-    <li>2. mengisi data yang sudah disediakan pada formulir</li>
-    <li>3. mengupload bukti pembayaran pada menu upload pembayaran</li>
+    <li>1. Buka menu Formulir Pendaftaran dan isi data diri kamu dengan lengkap.</li>
+    <li>2. Pastikan semua informasi sudah benar sebelum disimpan.</li>
+    <li>3. Lanjutkan ke menu Upload Pembayaran untuk mengunggah bukti pembayaranmu.</li>
 </ul>
+
+<h5>📢 Setelah berhasil mendaftar, harap membawa berkas persyaratan ke pondok:</h5>
+<ul>
+    <li>Fotocopy ijazah atau surat keterangan lulus yang telah dilegalisir (3 lembar)</li>
+    <li>Fotocopy kartu keluarga (3 lembar)</li>
+    <li>Fotocopy akta kelahiran (3 lembar)</li>
+    <li>Fotocopy KTP orang tua (3 lembar)</li>
+    <li>Fotocopy KIP (3 lembar)</li>
+    <li>Fotocopy piagam prestasi (3 lembar, jika ada)</li>
+</ul>
+
+<h5>Apabila ada pertanyaan atau kendala, silakan menghubungi admin. Semoga proses pendaftaran berjalan lancar, dan kami nantikan kehadiran Anda di pondok!</h5>
 @endif
 
 @if (Auth::user()->level !='calon_santri')    
