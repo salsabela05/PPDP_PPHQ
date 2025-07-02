@@ -30,15 +30,30 @@
                     <th>Keterangan</th>
                     <th>Bukti</th>
                     <th>Status</th>
+                    <th>Kwitansi</th> 
                 </tr>
             </thead>
             <tbody>
-                @foreach($pembayarans as $index => $p)
+               @foreach($pembayaran as $index => $p)
                     <tr>
                         <td>{{ $index + 1 }}</td>
                         <td>{{ $p->keterangan }}</td>
                         <td><a href="{{ asset('storage/' . $p->bukti) }}" target="_blank">Lihat Bukti</a></td>
-                        <td>{{ $p->status }}</td>
+                        <td>
+                            {{ $p->status }}
+                            @if ($p->status_info)
+                                - {{ $p->status_info }}
+                            @endif
+                        </td>
+                        <td>
+                            @if ($p->status == 'dikonfirmasi' && $p->kwitansi)
+                                <a href="{{ asset('storage/' . $p->kwitansi) }}" class="btn btn-sm btn-success" target="_blank">
+                                    Unduh Kwitansi
+                                </a>
+                            @else
+                                <span class="text-muted">-</span>
+                            @endif
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

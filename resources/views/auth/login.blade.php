@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-    <title>Admin</title>
+    <title>Halaman Login</title>
     <!-- Custom CSS -->
     <link href="/admin/dist/css/style.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -39,7 +39,7 @@
         <!-- Login box.scss -->
         <!-- ============================================================== -->
         <div class="auth-wrapper d-flex no-block justify-content-center align-items-center bg-dark">
-            <div class="auth-box bg-dark border-top border-secondary">
+            <div class="auth-box bg-secondary border-top border-secondary">
                 <div id="loginform">
                     
                     </div>
@@ -58,7 +58,14 @@
                         @csrf
                         <div class="row p-b-30">
                                 <div class="col-12">
+                                    <div class="text-center mb-3">
+                                        <img src="{{ asset('assets/img/logo_pphq.png') }}" alt="Logo Pondok" style="max-width: 70px; height: auto;">
+                                    </div>
+                                <div class="text-center p-b-10">
+                                    <h4 class="text-white">Selamat Datang di Sistem PSB</h4>
                                     <h3 class="text-center text-white">Login</h3>
+                                </div>
+                                   
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text bg-success text-white" id="basic-addon1"><i class="ti-user"></i></span>
@@ -84,6 +91,9 @@
                             </div>
                         </div>
                     </form>
+                    <div class="text-center text-white mt-3">
+                        <small>© 2025 Pondok Pesantren PPHQ. All rights reserved.</small>
+                    </div>
                 </div>
             </div>
         </div>

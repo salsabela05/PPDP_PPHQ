@@ -2,6 +2,7 @@
 <html dir="ltr" lang="en">
 
 <head>
+    <!-- Metadata halaman -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Tell the browser to be responsive to screen width -->
@@ -21,6 +22,7 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -59,7 +61,7 @@
                         <!--End Logo icon -->
                          <!-- Logo text -->
                          <span class="logo-text" style="font-size: 20px; font-weight: bold; color: white;">
-                             PPDB PPHQ
+                             PSB PPHQ
                         </span>
 
                             
@@ -108,22 +110,13 @@
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/admin/assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
-                            <div class="dropdown-menu dropdown-menu-right user-dd animated">
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i> My Balance</a>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-email m-r-5 m-l-5"></i> Inbox</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings m-r-5 m-l-5"></i> Account Setting</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/logout">
-                                    <i class="fa fa-power-off m-r-5 m-l-5"></i> Logout
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <div class="p-l-30 p-10"><a href="javascript:void(0)" class="btn btn-sm btn-success btn-rounded">View Profile</a></div>
-                            </div>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-danger text-white d-flex align-items-center px-3 py-1 rounded-pill" href="/logout" title="Logout" style="font-size: 14px; gap: 4px;">
+                                <i class="fa fa-power-off"></i>
+                                <span>Logout</span>
+                            </a>
                         </li>
+
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
@@ -162,18 +155,60 @@
                         </li>
                         @endif
 
-                        @if (Auth::user()->level =='panitia' || Auth::user()->level =='sekretaris' || Auth::user()->level =='ketua') 
+                        @if (Auth::user()->level =='panitia') 
                         <!-- panitia PPBB -->
+                         <li class="sidebar-item"> 
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/app/daftar-formulir" aria-expanded="false">
+                                <i class="mdi mdi-file-document-edit"></i><span class="hide-menu">Daftar Formulir</span>
+                            </a>
+                        </li>
                         <li class="sidebar-item"> 
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/app/formulir" aria-expanded="false">
-                                <i class="mdi mdi-chart-bar"></i><span class="hide-menu">Daftar Pembayaran</span>
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/app/daftar-pembayaran" aria-expanded="false">
+                                <i class="mdi mdi-receipt-text"></i><span class="hide-menu">Daftar Pembayaran</span>
                             </a>
                         </li>
 
+                        <!-- panitia PPBB -->
+                        <li class="sidebar-item"> 
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/app/manajemen-akun" aria-expanded="false">
+                                <i class="mdi mdi-account"></i><span class="hide-menu">Manajemen Akun</span>
+                            </a>
+                        </li>
+
+                        @endif
+                        @if (Auth::user()->level =='panitia' || Auth::user()->level =='sekretaris') 
+                        <!-- sekretaris, panitia PPDB -->
+                         <li class="sidebar-item"> 
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/app/laporan/pembayaran" aria-expanded="false">
+                                <i class="mdi mdi-chart-bar"></i><span class="hide-menu">Laporan Pembayaran</span>
+                            </a>
+                        </li>
+                        @endif
+
+                        @if ( Auth::user()->level =='ketua')
+                        <!-- Ketua TPA -->
+                            <li class="sidebar-item"> 
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/ketua-tpa/santri-diterima" aria-expanded="false">
+                                    <i class="mdi mdi-account-check"></i><span class="hide-menu">Input Seleksi</span>
+                                </a>
+                            </li>
+                        @endif
+
+
+                        @if (Auth::user()->level == 'sekretaris')
+                        <!-- sekrearis -->
+                            <li class="sidebar-item"> 
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/sekretaris/kelas" aria-expanded="false">
+                                    <i class="mdi mdi-account-multiple"></i><span class="hide-menu">Pembagian Kelas</span>
+                                </a>
+                            </li>
+                        @endif
+
+                        @if (Auth::user()->level =='panitia' || Auth::user()->level =='sekretaris' || Auth::user()->level =='ketua')
                         <!-- sekretaris, panitia PPDB, Ketua TPA -->
                         <li class="sidebar-item"> 
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/app/laporan" aria-expanded="false">
-                                <i class="mdi mdi-chart-bar"></i><span class="hide-menu">Laporan</span>
+                                <i class="mdi mdi-chart-bar"></i><span class="hide-menu">Laporan Data Santri</span>
                             </a>
                         </li>
                         @endif
@@ -249,7 +284,6 @@
     <script src="/admin/assets/libs/flot/jquery.flot.crosshair.js"></script>
     <script src="/admin/assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
     <script src="/admin/dist/js/pages/chart/chart-page-init.js"></script>
-
 </body>
 
 </html>

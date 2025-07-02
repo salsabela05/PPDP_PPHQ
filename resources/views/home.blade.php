@@ -9,7 +9,7 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="/assets/img/favicon.png" rel="icon">
+  <link href="/assets/img/LOGO PPHQ.png" rel="icon">
   <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -48,27 +48,12 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li class="dropdown"><a href="about.html"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">Beranda</a></li>
+          <li><a href="#profil">Visi Misi</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#informasi">Informasi Pendaftaran</a></li>
+          <li><a href="#kontak">Kontak</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -90,16 +75,14 @@
           <div class="carousel-container">
             <h2>Selamat Datang di Pondok Pesantren Hidayatul Qur'an<br></h2>
             <p>Menyediakan pendidikan berbasis Al-Qur'an untuk membentuk karakter Islami yang unggul. Menjadi pribadi yang berilmu, berakhlak, dan beriman untuk kehidupan yang lebih baik.</p>
-            <a href="#featured-services" class="btn-get-started">Get Started</a>
           </div>
         </div><!-- End Carousel Item -->
 
         <div class="carousel-item">
-          <img src="/assets/img/PPHQ_DEPAN.JPEG" alt="">
+          <img src="/assets/img/pndok_putri.jpg" alt="">
           <div class="carousel-container">
             <h2>Menanam Ilmu, Menumbuhkan Iman</h2>
             <p>Pendidikan yang mengintegrasikan ilmu dan akhlak untuk membentuk pribadi unggul.Kami berkomitmen mencetak santri yang cerdas, berkarakter, dan siap mengabdi kepada umat..</p>
-            <a href="#featured-services" class="btn-get-started">Get Started</a>
           </div>
         </div><!-- End Carousel Item -->
 
@@ -110,7 +93,6 @@
             <p>📖 Tahfidz Al-Qur’an
                📚 Pendidikan Diniyah & Formal
                🏫 Pembinaan Karakter Islami</p>
-            <a href="#featured-services" class="btn-get-started">Get Started</a>
           </div>
         </div><!-- End Carousel Item -->
 
@@ -129,11 +111,11 @@
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="about section">
+    <section id="profil" class="profil section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
+        <h2>Profil</h2>
         <p>VISI MISI<br></p>
       </div><!-- End Section Title -->
 
@@ -156,7 +138,6 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <p>Mencetak Generasi Penerus yang Unggul untuk Menjadi Pribadi yang 5B: Beriman, Bertaqwa, Berakhlak, Berilmu, dan Berguna Bagi Umat. </p>
-            <a href="about.html" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
           </div>
 
         </div>
@@ -166,10 +147,49 @@
     </section><!-- /About Section -->
 
     
+    <!-- About Section -->
+    <section id="informasi" class="profil section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Informasi pendaftaran</h2>
+        <p>Peserta Didik baru<br></p>
+      </div><!-- End Section Title -->
+        </div>
+              <div class="container">
+                <div class="row gy-4">
+                  <div class="col-12 content" data-aos="fade-up" data-aos-delay="100">
+                     <p><strong>Pendaftaran dibuka setiap tahun dalam dua gelombang:</strong></p>
+                      <ul>
+                        <li>📌 <strong>Gelombang 1:</strong> Akhir tahun hingga awal tahun ajaran baru</li>
+                        <li>📌 <strong>Gelombang 2:</strong> Pertengahan tahun menjelang tahun ajaran baru</li>
+                      </ul>
+
+                      <p><strong>Proses daftar ulang dilakukan menjelang tahun ajaran dimulai.</strong></p>
+
+                      <p><strong>Calon santri wajib:</strong></p>
+                      <ul>
+                        <li>✔ Mengisi formulir resmi dari panitia</li>
+                        <li>✔ Melampirkan dokumen sesuai persyaratan</li>
+                      </ul>
+
+                      <p><em>Informasi lebih lanjut dan arahan teknis akan diumumkan melalui panitia penerimaan.</em></p></div>
+                  
+                      <p><strong>Untuk melanjutkan proses pendaftaran:</strong><br>
+                      Silakan <a href="/register">registrasi akun</a> terlebih dahulu, lalu <a href="/login">login</a> untuk mengisi formulir pendaftaran secara online.</p>
+                    </div>
+                </div>
+              </div>
+
+
+    </section><!-- /About Section -->
 
     <!-- Services Section -->
-    <section id="services" class="services section">
-
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Program</h2>
+        <p>PROGRAM UNGGULAN KAMI<br></p>
+      </div><!-- End Section Title -->
+    <section id="program" class="program section">
       <div class="container">
 
         <div class="row gy-4">
@@ -232,11 +252,11 @@
     </section><!-- /Services Section -->
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
+    <section id="galeri" class="portfolio section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
+        <h2>Galeri</h2>
         <p>Dokumentasi</p>
       </div><!-- End Section Title -->
 
@@ -271,32 +291,14 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <img src="/assets/img/kyai.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="/assets/img/kyai.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="/assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="/assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
+              <img src="/assets/img/gedungsmp.jpg" class="img-fluid" alt="">
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <img src="/assets/img/kegiatansantri.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="/assets/img/kegiatansantri.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
@@ -319,74 +321,78 @@
 
   <footer id="footer" class="footer dark-background">
 
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Pondok Pesantren Hidayatul Qur'an</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>Samping kampus 2 IAIN Metro, 38B Batanghari</p>
-            <p>Lampung Timur, Lampung</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+62 851-7691-1073</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-          <form action="forms/newsletter.php" method="post" class="php-email-form">
-            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-          </form>
-        </div>
-
+<div class="container footer-top">
+  <div class="row gy-4">
+    <div class="col-lg-4 col-md-6 footer-about">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <span class="sitename">Pondok Pesantren Hidayatul Qur'an</span>
+      </a>
+      <div class="footer-kontak pt-3">
+        <p>Samping kampus 2 IAIN Metro, 38B Batanghari</p>
+        <p>Lampung Timur, Lampung</p>
+          <p class="mt-3">
+            <strong>Phone (WhatsApp):</strong>
+            <a href="https://wa.me/6285838571178" target="_blank">+62 851-7691-1073</a>
+          </p>
+        <p><strong>Email:</strong> <span>info@example.com</span></p>
       </div>
+      <section id="kontak"></section>
     </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">PPHQ</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href=“https://themewagon.com>ThemeWagon
-      </div>
+    <div class="col-lg-2 col-md-3 footer-links">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Terms of service</a></li>
+        <li><a href="#">Privacy policy</a></li>
+      </ul>
     </div>
 
-  </footer>
+    <div class="col-lg-2 col-md-3 footer-links">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#">Web Design</a></li>
+        <li><a href="#">Web Development</a></li>
+        <li><a href="#">Product Management</a></li>
+        <li><a href="#">Marketing</a></li>
+        <li><a href="#">Graphic Design</a></li>
+      </ul>
+    </div>
+
+    <div class="col-lg-4 col-md-12">
+      <div class="footer-newsletter">
+        <h4>Our Newsletter</h4>
+        <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+        <form action="forms/newsletter.php" method="post" class="php-email-form">
+          <div class="newsletter-form">
+            <input type="email" name="email">
+            <input type="submit" value="Subscribe">
+          </div>
+          <div class="loading">Loading</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+        </form>
+      </div>
+      <div class="social-links d-flex mt-4">
+        <a href="https://www.tiktok.com/@hq_media?_t=ZS-8wBXRiGUBbW&_r=1" target="_blank"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.facebook.com/share/1AkyUta7Gp/" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/hidayatul_quran38?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://youtube.com/@hidayatulquran38?si=DVy3m_Pmk4Fyi4Wi" target="_blank"><i class="bi bi-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container copyright text-center mt-4">
+  <p>© <span>Copyright</span> <strong class="px-1 sitename">PPHQ</strong> <span>All Rights Reserved</span></p>
+  <div class="credits">
+    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
+  </div>
+</div>
+
+</footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

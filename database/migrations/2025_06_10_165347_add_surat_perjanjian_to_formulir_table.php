@@ -11,13 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pembayaran', function (Blueprint $table) {
-            $table->id();
-            $table->bigInteger('user_id');
-            $table->string('bukti');
-            $table->string('status');
-            $table->string('keterangan');
-            $table->timestamps();
+        // database/migrations/xxxx_xx_xx_add_surat_perjanjian_to_formulir_table.php
+        Schema::table('formulir', function (Blueprint $table) {
+            //$table->string('surat_perjanjian')->nullable();
         });
     }
 
@@ -26,6 +22,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pembayaran');
+        Schema::table('formulir', function (Blueprint $table) {
+            //
+        });
     }
 };

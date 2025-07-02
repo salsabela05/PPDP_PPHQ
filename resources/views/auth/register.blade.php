@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="/admin/assets/images/favicon.png">
-    <title>Register Admin</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/admin/assets/images/LOGO PPHQ.png">
+    <title>Register</title>
     <link href="/admin/dist/css/style.min.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -27,15 +27,16 @@
 
         <!-- PERUBAHAN: Tambahkan style untuk naikkan posisi form -->
         <div class="auth-wrapper d-flex no-block justify-content-center bg-dark"
-            style="align-items: flex-start !important; padding-top: 40px !important; min-height: 100vh;"> <!-- DITAMBAHKAN -->
-            <div class="auth-box bg-dark border-top border-secondary mt-5"> <!-- DITAMBAHKAN -->
+            style="align-items: flex-start !important; padding-top: 0px !important; min-height: 100vh;"> <!-- DITAMBAHKAN -->
+            <div class="auth-box bg-secondary border-top border-secondary"> <!-- DITAMBAHKAN -->
                 <div>
-                    <div class="text-center p-t-20 p-b-20">
-                    </div>
                     <form class="form-horizontal m-t-20" action="/register/submit" method="post">
                         @csrf
                         <div class="row p-b-30">
                             <div class="col-12">
+                                <div class="text-center mb-3">
+                                    <img src="{{ asset('assets/img/logo_pphq.png') }}" alt="Logo Pondok" style="max-width: 70px; height: auto;">
+                                </div>
                                 <h3 class="text-center text-white">Registrasi Calon Santri</h3>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">

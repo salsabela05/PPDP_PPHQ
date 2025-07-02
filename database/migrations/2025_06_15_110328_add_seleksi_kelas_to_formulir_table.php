@@ -11,13 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pembayaran', function (Blueprint $table) {
-            $table->id();
-            $table->bigInteger('user_id');
-            $table->string('bukti');
-            $table->string('status');
-            $table->string('keterangan');
-            $table->timestamps();
+        Schema::table('formulir', function (Blueprint $table) {
+            $table->enum('status_seleksi', ['diterima', 'ditolak', 'belum'])->default('belum');
+            $table->string('kelas')->nullable();
         });
     }
 
@@ -26,6 +22,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pembayaran');
+        Schema::table('formulir', function (Blueprint $table) {
+            //
+        });
     }
 };

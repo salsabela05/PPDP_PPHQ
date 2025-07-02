@@ -4,137 +4,101 @@
 <div class="container">
     <div class="card">
         <div class="card-body">
-            <h3 class="text-center">FORMULIR PENDAFTARAN PENERIMAAN SANTRI BARU PONDOK PESANTREN HIDAYATUL QUR'AN</h3>
+            <h3 class="text-center">FORMULIR PENDAFTARAN PENERIMAAN SANTRI BARU<br>PONDOK PESANTREN HIDAYATUL QUR'AN</h3>
+
+            {{-- FORM PENDAFTARAN --}}
             <form action="/app/formulir/submit" method="post" enctype="multipart/form-data">
                 @csrf
 
+                {{-- PILIH JENJANG --}}
+                <div class="mb-2">
+                    <label>Pilihan Jenjang</label>
+                    <select name="jenjang" class="form-control" required>
+                        <option value="">-- Pilih Jenjang --</option>
+                        <option value="umum" {{ (old('jenjang', strtolower($formulir->jenjang ?? '')) == 'umum') ? 'selected' : '' }}>Umum</option>
+                        <option value="tahfidz" {{ (old('jenjang', strtolower($formulir->jenjang ?? '')) == 'tahfidz') ? 'selected' : '' }}>Tahfidz</option>
+                    </select>
+                </div>
+
+                {{-- IDENTITAS SANTRI --}}
                 <h4>IDENTITAS SANTRI</h4>
-                <div class="mb-2">
-                    <label>Nama Lengkap</label>
-                    <input type="text" name="nama" class="form-control" value="{{ $formulir->nama ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>Nama Panggilan</label>
-                    <input type="text" name="nama_panggilan" class="form-control" value="{{ $formulir->nama_panggilan ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>Tempat Tanggal Lahir</label>
-                    <input type="text" name="tempat_lahir" class="form-control" value="{{ $formulir->tempat_lahir ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>Jenis Kelamin</label>
-                    <input type="text" name="jenis_kelamin" class="form-control" value="{{ $formulir->jenis_kelamin ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>Asal Sekolah</label>
-                    <input type="text" name="asal_sekolah" class="form-control" value="{{ $formulir->asal_sekolah ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>Sekolah Saat Ini, Semester, Jurusan</label>
-                    <input type="text" name="sekolah_saat_ini" class="form-control" value="{{ $formulir->sekolah_saat_ini ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>NIK</label>
-                    <input type="text" name="nik" class="form-control" value="{{ $formulir->nik ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>Alamat</label>
-                    <input type="text" name="alamat" class="form-control" value="{{ $formulir->alamat ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>Dusun</label>
-                    <input type="text" name="dusun" class="form-control" value="{{ $formulir->dusun ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>RT/RW</label>
-                    <input type="text" name="rt_rw" class="form-control" value="{{ $formulir->rt_rw ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>Kelurahan/Desa</label>
-                    <input type="text" name="kelurahan" class="form-control" value="{{ $formulir->kelurahan ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>Kode Pos</label>
-                    <input type="text" name="kode_pos" class="form-control" value="{{ $formulir->kode_pos ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>Kecamatan</label>
-                    <input type="text" name="kecamatan" class="form-control" value="{{ $formulir->kecamatan ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>Kabupaten/Kota</label>
-                    <input type="text" name="kabupaten" class="form-control" value="{{ $formulir->kabupaten ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>Provinsi</label>
-                    <input type="text" name="provinsi" class="form-control" value="{{ $formulir->provinsi ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>No. HP Orang Tua/Wali</label>
-                    <input type="text" name="nohp_wali" class="form-control" value="{{ $formulir->nohp_wali ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>No. HP Santri</label>
-                    <input type="text" name="nohp_santri" class="form-control" value="{{ $formulir->nohp_santri ?? '' }}" required>
-                </div>
+                @foreach ([
+                    'nama' => 'Nama Lengkap',
+                    'nama_panggilan' => 'Nama Panggilan',
+                    'tempat_lahir' => 'Tempat Tanggal Lahir',
+                    'jenis_kelamin' => 'Jenis Kelamin',
+                    'asal_sekolah' => 'Asal Sekolah',
+                    'sekolah_saat_ini' => 'Sekolah Saat Ini, Semester, Jurusan',
+                    'nik' => 'NIK',
+                    'alamat' => 'Alamat',
+                    'dusun' => 'Dusun',
+                    'rt_rw' => 'RT/RW',
+                    'kelurahan' => 'Kelurahan/Desa',
+                    'kode_pos' => 'Kode Pos',
+                    'kecamatan' => 'Kecamatan',
+                    'kabupaten' => 'Kabupaten/Kota',
+                    'provinsi' => 'Provinsi',
+                    'nohp_wali' => 'No. HP Orang Tua/Wali',
+                    'nohp_santri' => 'No. HP Santri',
+                ] as $field => $label)
+                    <div class="mb-2">
+                        <label>{{ $label }}</label>
+                        <input type="text" name="{{ $field }}" class="form-control" value="{{ $formulir->$field ?? '' }}" required>
+                    </div>
+                @endforeach
 
+                {{-- DATA AYAH --}}
                 <h4>DATA AYAH KANDUNG</h4>
-                <div class="mb-2">
-                    <label>Nama Ayah</label>
-                    <input type="text" name="nama_ayah" class="form-control" value="{{ $formulir->nama_ayah ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>NIK</label>
-                    <input type="text" name="nik_ayah" class="form-control" value="{{ $formulir->nik_ayah ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>Pekerjaan</label>
-                    <input type="text" name="pekerjaan_ayah" class="form-control" value="{{ $formulir->pekerjaan_ayah ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>Penghasilan</label>
-                    <input type="text" name="penghasilan_ayah" class="form-control" value="{{ $formulir->penghasilan_ayah ?? '' }}" required>
-                </div>
+                @foreach ([
+                    'nama_ayah' => 'Nama Ayah',
+                    'nik_ayah' => 'NIK',
+                    'pekerjaan_ayah' => 'Pekerjaan',
+                    'penghasilan_ayah' => 'Penghasilan',
+                ] as $field => $label)
+                    <div class="mb-2">
+                        <label>{{ $label }}</label>
+                        <input type="text" name="{{ $field }}" class="form-control" value="{{ $formulir->$field ?? '' }}" required>
+                    </div>
+                @endforeach
 
+                {{-- DATA IBU --}}
                 <h4>DATA IBU KANDUNG</h4>
-                <div class="mb-2">
-                    <label>Nama Ibu</label>
-                    <input type="text" name="nama_ibu" class="form-control" value="{{ $formulir->nama_ibu ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>NIK</label>
-                    <input type="text" name="nik_ibu" class="form-control" value="{{ $formulir->nik_ibu ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>Pekerjaan</label>
-                    <input type="text" name="pekerjaan_ibu" class="form-control" value="{{ $formulir->pekerjaan_ibu ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>Penghasilan</label>
-                    <input type="text" name="penghasilan_ibu" class="form-control" value="{{ $formulir->penghasilan_ibu ?? '' }}" required>
-                </div>
+                @foreach ([
+                    'nama_ibu' => 'Nama Ibu',
+                    'nik_ibu' => 'NIK',
+                    'pekerjaan_ibu' => 'Pekerjaan',
+                    'penghasilan_ibu' => 'Penghasilan',
+                ] as $field => $label)
+                    <div class="mb-2">
+                        <label>{{ $label }}</label>
+                        <input type="text" name="{{ $field }}" class="form-control" value="{{ $formulir->$field ?? '' }}" required>
+                    </div>
+                @endforeach
 
+                {{-- DATA WALI --}}
                 <h4>DATA WALI</h4>
+                @foreach ([
+                    'nama_wali' => 'Nama Wali',
+                    'nik_wali' => 'NIK',
+                    'pekerjaan_wali' => 'Pekerjaan',
+                    'penghasilan_wali' => 'Penghasilan',
+                ] as $field => $label)
+                    <div class="mb-2">
+                        <label>{{ $label }}</label>
+                        <input type="text" name="{{ $field }}" class="form-control" value="{{ $formulir->$field ?? '' }}" required>
+                    </div>
+                @endforeach
+
+                {{-- LINK BERKAS --}}
                 <div class="mb-2">
-                    <label>Nama Wali</label>
-                    <input type="text" name="nama_wali" class="form-control" value="{{ $formulir->nama_wali ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>NIK</label>
-                    <input type="text" name="nik_wali" class="form-control" value="{{ $formulir->nik_wali ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>Pekerjaan</label>
-                    <input type="text" name="pekerjaan_wali" class="form-control" value="{{ $formulir->pekerjaan_wali ?? '' }}" required>
-                </div>
-                <div class="mb-2">
-                    <label>Penghasilan</label>
-                    <input type="text" name="penghasilan_wali" class="form-control" value="{{ $formulir->penghasilan_wali ?? '' }}" required>
+                    <label>Link Berkas Google Drive (KK, Akta, Ijazah, dll)</label>
+                    <input type="url" name="link_berkas" class="form-control" placeholder="https://drive.google.com/..." value="{{ $formulir->link_berkas ?? '' }}" required>
                 </div>
 
+                {{-- FOTO --}}
                 <div class="mb-2">
-                    @if ($formulir->foto)
-                    <img height="100" src="{{ url('storage/'.$formulir->foto) }}" alt=""> <br>
+                    @if ($formulir && $formulir->foto)
+                        <img height="100" src="{{ url('storage/'.$formulir->foto) }}" alt=""> <br>
                     @endif
                     <label>Foto</label>
                     <input type="file" name="foto" class="form-control">
@@ -143,8 +107,45 @@
                 <div class="mb-2">
                     <button class="btn btn-primary w-100">Daftar</button>
                 </div>
-
             </form>
+
+            {{-- SURAT PERJANJIAN --}}
+            <hr>
+            <h4>Surat Perjanjian</h4>
+            <p>Silakan unduh, tanda tangani, lalu unggah kembali surat perjanjian berikut.</p>
+            <a href="{{ asset('template/surat_perjanjian.pdf') }}" class="btn btn-success" download>📄 Unduh Surat</a>
+
+            <form action="{{ route('formulir.uploadSurat') }}" method="POST" enctype="multipart/form-data" class="mt-3">
+                @csrf
+                <div class="mb-3">
+                    <label for="surat_perjanjian" class="form-label">Unggah Surat Perjanjian (PDF):</label>
+                    <input type="file" name="surat_perjanjian" class="form-control" accept="application/pdf">
+                </div>
+                <button type="submit" class="btn btn-primary">Unggah</button>
+            </form>
+
+            @if ($formulir && $formulir->surat_perjanjian)
+                <p class="mt-3">📂 <a href="{{ asset('storage/' . $formulir->surat_perjanjian) }}" target="_blank">Lihat surat yang sudah diunggah</a></p>
+            @endif
+
+            {{-- STATUS FORMULIR DAN RINCIAN BIAYA --}}
+            @if ($formulir)
+                @if ($formulir->status_formulir == 'diterima')
+                    <h4>Rincian Biaya</h4>
+
+                    @if (strtolower($formulir->jenjang) == 'tahfidz')
+                        @include('partials.rincian_tahfidz')
+                    @elseif (strtolower($formulir->jenjang) == 'umum')
+                        @include('partials.rincian_umum')
+                    @endif
+                @elseif ($formulir->status_formulir == 'ditolak')
+                    <div class="alert alert-danger">Formulir Anda ditolak. Silakan periksa kembali berkas Anda.</div>
+                @else
+                    <div class="alert alert-info">Menunggu verifikasi formulir dari panitia.</div>
+                    <strong>Rincian biaya akan muncul setelah panitia mengonfirmasi berkas persyaratan.</strong>
+                @endif
+            @endif
+
         </div>
     </div>
 </div>
