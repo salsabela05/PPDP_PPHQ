@@ -9,7 +9,7 @@
 <h5>✨ Panduan Pendaftaran Mudah ✨</h5>
 <ul>
     <li>1. Buka menu Formulir Pendaftaran dan isi data diri kamu dengan lengkap.</li>
-    <li>2. Pastikan bahwa berkas yang diunggah sudah benar dan sesuai dengan persyaratan.</li>
+    <li>2php. Pastikan bahwa berkas yang diunggah sudah benar dan sesuai dengan persyaratan.</li>
     <li>3. Pastikan semua informasi sudah benar sebelum disimpan.</li>
     <li>4. Lanjutkan ke menu Upload Pembayaran untuk mengunggah bukti pembayaranmu.</li>
     <li>5. Pastikan untuk mengunduh dan mengupload surat perjanjian.</li>

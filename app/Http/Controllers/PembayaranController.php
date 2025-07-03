@@ -58,7 +58,7 @@ class PembayaranController extends Controller
     }
 
     $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('pdf.kwitansi', ['pembayaran' => $pembayaran]);
-    file_put_contents(public_path($pdfPath), $pdf->output());
+    Storage::disk('public')->put($pdfPath, $pdf->output());
 
     $pembayaran->kwitansi = $pdfPath;
     $pembayaran->save();
