@@ -37,7 +37,7 @@
                                 <div class="text-center mb-3">
                                     <img src="{{ asset('assets/img/logo_pphq.png') }}" alt="Logo Pondok" style="max-width: 70px; height: auto;">
                                 </div>
-                                <h3 class="text-center text-white">Registrasi Calon Santri</h3>
+                                <h3 class="text-center text-white">Registrasi Untuk Calon Santri</h3>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text bg-success text-white" id="basic-addon1"><i class="ti-user"></i></span>
